@@ -1,4 +1,4 @@
-# program to make proper capitalization on text from input.
+# program to make proper capitalization on text from input. Py3.6
 # useful when working with lots of strings that are improperly capitalized
 
 text_to_correct = input("Enter text to correct: ")
