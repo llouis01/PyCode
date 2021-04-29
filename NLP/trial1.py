@@ -7,6 +7,11 @@ Created on Tue Apr 20 13:06:36 2021
 
 import tensorflow as ts
 from tensorflow.keras.preprocessing.text import Tokenizer as TKZ
+import pandas as pd
+import os
+
+# import data
+data = pd.read_excel("C:\\Users\\Loube\\Documents\\GitHub\\Python_Codes\\NLP\\comments.xls")
 
 sentences = ["I love my dog",
              "I love my cat",
