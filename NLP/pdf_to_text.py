@@ -22,7 +22,23 @@ pp3 = reader.getPage(2).extractText()
 pp4 = reader.getPage(3).extractText()
 
 # read multiple pages iteratively
-pages = []
-for i in range(reader.getNumPages()):
-    pages[i] = reader.getPage(i).extractText()
-    print(reader.getPage(i).extractText())
+# pages = []
+# for i in range(reader.getNumPages()):
+#     pages[i] = reader.getPage(i).extractText()
+#     print(reader.getPage(i).extractText())
+    
+def pdf_to_text(pdf_file):
+    file_content = []
+    # import pdf file, extract text and pass into a .txt
+    pdf_reader = PDF2.PdfFileReader(pdf_file)
+    
+    # get page and content
+    for i in range(pdf_reader.getNumPages()):
+        page = pdf_reader.getPage(i)
+        p_content = page.extractText().replace("\n", "")
+        file_content.append(p_content)
+        
+
+
+
+pdf_to_text("SPC_Louis_Range_OPORD.pdf")
