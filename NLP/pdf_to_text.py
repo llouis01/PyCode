@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Jul  2 09:59:33 2021
+Created on Fri Jun 24 09:59:33 2021
 
 @author: GrandLoup
 """
@@ -11,10 +11,10 @@ import pandas as pd
 import PyPDF2 as PDF2
 
 #### import and process pdf file 
-file1 = open("SPC_Louis_Range_OPORD.pdf", "rb")
+# file1 = open("SPC_Louis_Range_OPORD.pdf", "rb")
 
 
-reader = PDF2.PdfFileReader(file1) # reader
+# reader = PDF2.PdfFileReader(file1) # reader
 
 # import file 1-by-1
 # pp1 = reader.getPage(0).extractText()
@@ -43,9 +43,10 @@ def pdf_to_text(pdf_file, output_txt):
 
     # save to text file
     with open(output_txt, "w") as output:
-        output.write("\n".join([i for i in file_content]))
+        output.write("".join([i for i in file_content]))
         
 
 
 os.chdir(r"C:\Users\Loube\Desktop\OCS Packet")
+
 pdf_to_text("SPC_Louis_Range_OPORD.pdf", "pdf_content.txt")
